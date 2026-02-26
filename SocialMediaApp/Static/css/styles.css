@@ -1,0 +1,80 @@
+/* Custom UI styles for SocialMediaApp */
+
+body {
+  background-color: #f7f7f7;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar theme */
+.navbar {
+  background-color: #4a90e2 !important;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #fff !important;
+}
+.navbar .nav-link:hover {
+  color: #d1e9ff !important;
+}
+
+/* Card styling */
+.card {
+  border-radius: 15px;
+}
+
+/* Post cards */
+.post-container {
+  margin-top: 2rem;
+}
+.post-card {
+  margin: 1rem 0;
+}
+.post-card .user-img {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+}
+
+/* Profile sidebar */
+.profile-sidebar {
+  text-align: center;
+}
+.profile-sidebar img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+/* Search input compact */
+.navbar .form-inline .form-control {
+  width: 200px;
+}
+
+/* Authentication pages */
+.auth-container {
+  margin-top: 3rem;
+}
+.auth-container h1 {
+  margin-top: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .navbar .form-inline {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .navbar .form-inline .form-control {
+    width: 100%;
+  }
+}
+
+/* Buttons */
+.btn-primary-custom {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+}
+.btn-primary-custom:hover {
+  background-color: #357ab8;
+  border-color: #357ab8;
+}
