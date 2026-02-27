@@ -5,8 +5,8 @@ Django settings for SocialMediaApp project.
 from pathlib import Path
 import os
 
-# 1. المسارات الأساسية - تعديل BASE_DIR ليرى الفولدر الرئيسي
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+# 1. المسارات الأساسية - تم التعديل ليكون BASE_DIR هو /home/gouda/SocialMediaApp
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # 2. إعدادات الأمان
 SECRET_KEY = "django-insecure-v6hx=05v-iwcfm%7fba4m95vfmf+9&%q+sdyp)(sb32$11@0d4"
@@ -40,11 +40,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "SocialMediaApp.urls"
 
-# 5. القوالب (Templates) - تعديل المسار ليدخل الفولدر الصحيح
+# 5. القوالب (Templates) - التعديل هنا لضمان الوصول لملف login.html
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, 'SocialMediaApp', 'Templates')], 
+        "DIRS": [os.path.join(BASE_DIR, 'Templates')], 
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -59,11 +59,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "SocialMediaApp.wsgi.application"
 
-# 6. قاعدة البيانات
+# 6. قاعدة البيانات - التأكد من المسار الصحيح
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "SocialMediaApp" / "db.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -89,10 +89,11 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# تعديل مسار الـ Static ليتوافق مع مكان الفولدر في الصورة
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'SocialMediaApp', 'Static')]
+
+# التأكد من مسار Static
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'Static')]
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'SocialMediaApp', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
