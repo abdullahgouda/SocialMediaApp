@@ -57,7 +57,7 @@ def login_view(request):
         return redirect('profile')
     else:
         if request.method == "GET":
-            return render(request, "login.html")
+            return render(request, "Login.html")
         
         elif request.method == "POST":
             
